@@ -18,8 +18,8 @@ var REDIRECTS = {
  "/publications/%5BJKD06a%5D.pdf": "/publications/JKD06a.pdf",
  "/publications/%5BJM02%5DODBase02_V1-12.pdf": "/publications/JM02_V12.pdf",
  "/Talks/ORM-DLR.Tutorial.Ver06.pdf": "/Talks/ORM-DLR Tutorial.Ver05-onlineVersion.pdf",
- "/CContology/CCglossary": "/CContology/CCglossary.htm",
- "/CCcontact.htm": "/CContology/CCcontext.htm",
+ "/CContology/CCglossary": "/CContology/CCglossary.html",
+ "/CCcontact.htm": "/CContology/CCcontext.html",
  "/orm/verbalization/german/verbalization_deutsch_ver02.pdf": "/orm/verbalization/German/verbalization_Deutsch_Ver02.pdf",
  "/CContology": "/CContology/",
  "/publications/J06.pdf.htm": "/publications/J06.pdf",
@@ -202,7 +202,7 @@ var REDIRECTS = {
  "/ooa/presentations/roche%20ontology%20in%20hr.pdf": "/OOA/Presentations/Roche%20Ontology%20in%20HR.pdf",
  "/courses/KnowledgeEngineering/OldSlides/Jarrar.LectureNotes.KnowledgeEngineering.Ch7_12_others_V4MJ.pdf": "/courses/ORM/Jarrar.LectureNotes.SchemaEngineering.pdf",
  "/courses/webdata/jarrar.lecturenotes.data%20fusion%20using%20rdf.v2.pdf": "/courses/WebData/Jarrar.LectureNotes.DataFusion.pdf",
- "/publications/jarrar-bib.htm": "/publications/Publications_bib.htm",
+ "/publications/jarrar-bib.htm": "/publications/Publications_bib.html",
  "/publications/d133-ooa%20requirements%20v2%203.pdf": "/publications/D133-OOA%20Requirements%20v2%203.pdf",
  "/courses/webdata/jarrar.lecturenotes.data%20schema%20integratio.v2.pdf": "/courses/WebData/Jarrar.LectureNotes.SchemaIntegration.pdf",
  "/phd-thesis/jarrar-phdthesis%20ver0.165.aftprinted.pdf": "/phd-thesis/JarrarPhDThesisV167.pdf",
@@ -220,6 +220,8 @@ var REDIRECTS = {
   }
   var path = location.pathname, target, hops = 0, next;
   while (hops < 5 && (next = find(target || path))) { target = next; hops++; }
+  // Pages were renamed from .htm to .html
+  if (!target && /\.htm$/i.test(path)) target = path + "l";
   if (target) location.replace(target + location.search + location.hash);
 })();
 </script>

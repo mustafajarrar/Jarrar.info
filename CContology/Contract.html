@@ -5,7 +5,7 @@
 <head>
   
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Complaint Problems</title>
+  <title>Contract</title>
   
 <link type="text/css" rel="stylesheet" href="CCstyle.css" />
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
@@ -56,33 +56,34 @@
       </div>
       <p align="right" class="MsoNormal">&nbsp;</p>
       <p align="right" class="MsoNormal">&nbsp;</p>
-      <a href="index.htm"><img src="Images/home.JPG" alt="Home"/></a> <a href="index.htm#Design"><img src="Images/design.JPG" alt="Ontology Design"/></a> 
-      <a href="index.htm#Downloads"><img src="Images/download.JPG" alt="Downlaod"/></a> 
-      <a href="index.htm#Documentation"><img src="Images/Documentation.JPG" alt="Documentation"/></a> 
-      <a href="index.htm#Contact"><img src="Images/Contact.JPG" alt="Contact Person"/></a> 
+       
+      <a href="index.html"><img src="Images/home.JPG" alt="Home"/></a> <a href="index.html#Design"><img src="Images/design.JPG" alt="Ontology Design"/></a> 
+      <a href="index.html#Downloads"><img src="Images/download.JPG" alt="Downlaod"/></a> 
+      <a href="index.html#Documentation"><img src="Images/Documentation.JPG" alt="Documentation"/></a> 
+      <a href="index.html#Contact"><img src="Images/Contact.JPG" alt="Contact Person"/></a> 
       <p align="right" class="MsoNormal">&nbsp;</p>
       <p align="center" class="MsoNormal"><a href="http://validator.w3.org/check?uri=referer"><img
 src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1!" /></a></p>
       </td>
     <td valign="bottom" width="4%"> </td>
     <td> <h1 align="center" class="nobreak">Customer Complaint Ontology</h1>
-      <h1 class="nobreak">The &quot;Complaint Problems&quot; module</h1>
+      <h1 class="nobreak">The &quot;Contract&quot; module</h1>
       <h4 class="nobreak"> Final Draft 21 May 2005</h4>
       <hr /> 
       <div align="justify"> 
-        <p>The <a href="#Diagram">diagram</a> below shows the Complaint Problems 
-          module. It represents a taxonomy of the most common complaint problems. 
-          As shown below, we distinguish between a &#8216;Complaint&#8217; and 
-          a &#8216;Problem&#8217;. A &#8216;Complaint&#8217; describes one or 
-          more &#8216;Problems&#8217;. While the concept &#8216;Problem&#8217; 
-          is defined as &#8220;A source of difficulty or dissatisfaction&#8221;, 
-          the concept &#8216;Complaint&#8217; is defined as &#8220;An expression 
-          of grievance or resentment issued by a complainant against a compliant-recipient, 
-          describing a problem(s) that needs to be resolved&#8221;.</p>
+        <p>The <a href="#Diagram">diagram</a> below shows the Contract module. 
+          A &#8216;Contract&#8217; is defined in the <a href="CCglossary.html">CC-Glossary</a> 
+          as &#8220;a binding agreement, between two or more legal persons, that 
+          is enforceable by law&#8221;. Under this definition, an invoice can 
+          also be a contract. This module specifies the information that should 
+          be provided for a contract associated with a &#8216;Purchase Phase Problem&#8217; 
+          or &#8216;Post-purchase Phase Problem&#8217;. Notice that we speak of 
+          a &#8216;Contract&#8217; from the moment there is a &#8216;Contract 
+          Order Date&#8217;.</p>
         <p>For the definition of each vocabulary in this diagram please see the 
-          <a href="CCglossary.htm">CC-Glossary</a>. Notice that according to our 
-          <a href="index.htm#Design">ontology design</a>, each relation in this 
-          diagram is a lexon in the <a href="CClexons.htm">CC-Lexons</a>; this 
+          <a href="CCglossary.html">CC-Glossary</a>. Notice that according to our 
+          <a href="index.html#Design">ontology design</a>, each relation in this 
+          diagram is a lexon in the <a href="CClexons.html">CC-Lexons</a>; this 
           methodological principle is called <a href="http://www.starlab.vub.ac.be/staff/mustafa/phd-thesis/index.htm#ch3">Ontology 
           double-articulation</a>.</p>
         <p>This module is represented using the <a href="http://www.orm.net">ORM</a> 
@@ -92,35 +93,38 @@ src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1!" /></a></p>
           of this diagram can be found below.</p></div>
         
       <h2><a id="Diagram" name="Diagram">Diagram</a>:</h2>
-      <img src="Images/ComplaintProblems.JPG" width="798" height="1058" alt="ORM representation"/>
+      <img src="Images/Contract.JPG" alt="ORM representation"/>
 	  <h2><a id="Verbalization" name="Verbalization">Verbalization</a>:</h2>
-      <p><img src="Images/mandatory.gif" width="26" height="26" /><font color="#000099">Each 
-        <em> <strong>Purchase Phase Problem</strong></em> must <em><strong>has</strong></em> 
-        at least one <em><strong>Contract</strong></em></font>. (Mandatory)<br />
+      <p> <img src="Images/mandatory.gif" width="26" height="26" /><font color="#000099">Each 
+        <em> <strong>Contract</strong></em> must <em><strong>Has</strong></em> 
+        at least one <em><strong>Contract Order Date</strong></em></font>. (Mandatory)<br />
         <img src="Images/mandatory.gif" width="26" height="26" /><font color="#000099">Each 
-        <em> <strong>Post-purchase Phase Problem</strong></em> must <strong><em>has</em></strong> 
-        at least one <em><strong>Contract</strong></em>.</font> (Uniqueness)<br />
+        <em> <strong>Delivery</strong></em> must <em><strong>has</strong></em> 
+        at least one <em><strong>Address</strong></em></font>. (Mandatory)<br />
+        <img src="Images/mandatory.gif" width="26" height="26" /><font color="#000099">Each 
+        <em><strong>Delivery</strong></em> must <em><strong>has</strong></em> 
+        at least one <em><strong>Schedule</strong></em></font>. (Mandatory)<br />
+        <img src="Images/mandatory.gif" width="26" height="26" /><font color="#000099">Each 
+        <strong>Delivery</strong> should <strong>has</strong> <strong>Services</strong> 
+        or <strong>has</strong> <strong>Goods</strong>.</font> (Uniqueness)<br />
         <img src="Images/uniqueness.gif" width="26" height="26" /><font color="#000099">Each 
-        <strong> <em> Purchase Phase Problem</em></strong> must <em><strong>has</strong></em> 
-        at most one <em><strong>Contract</strong></em>.</font> (Uniqueness)<br />
+        <em> <strong>Contract</strong></em> must <em><strong>has</strong></em> 
+        at most one <em><strong>Sales Office</strong></em>.</font> (Uniqueness)<br />
         <img src="Images/uniqueness.gif" width="26" height="26" /><font color="#000099">Each 
-        <strong><em>Post-purchase Phase Problem</em></strong> must <em><strong>has</strong></em> 
-        at most one <em><strong>Contract</strong></em>.</font> (Uniqueness)<br>
-        <img src="Images/exclusion.gif" width="26" height="26" /> <font color="#000099">Each 
-        <em> <strong>Problem</strong></em> should be either<strong> <em>Non-Contract 
-        Problem</em></strong> or <em><strong>Contract Problem</strong></em>.</font> 
-        (Exclusive)<br>
-        <img src="Images/exclusion.gif" width="26" height="26" /> <font color="#000099">Each 
-        <em> <strong>Contract Problem</strong></em> should be either <em><strong>Post-purchase 
-        Phase Problem</strong></em> or <em><strong>Pre-purchase Phase Problem</strong></em>.</font> 
-        (Exclusive)<br>
+        <em> <strong>Goods</strong></em> must be <em><strong>is_of</strong></em> 
+        at most one <em><strong>Delivery</strong></em>.</font> (Uniqueness)<br />
+        <img src="Images/uniqueness.gif" width="26" height="26" /><font color="#000099">Each 
+        <em> <strong>Services</strong></em> must <em><strong>is_of</strong></em> 
+        at most one <em><strong>Delivery</strong></em>.</font> (Uniqueness)</p>
+      
       <h2><a id="ORMML" name="ORMML">ORM Markup</a>:</h2>
       <ul>
-        <li><img src="Images/DM-logo.JPG" width="15" height="15" /> <a href="Complaint_Problems.ormgs">Complaint_Problems.ormgs</a> 
+        <li><img src="Images/DM-logo.JPG" width="15" height="15" /> <a href="Contract.ormgs">Contract.ormgs</a> 
           file</li>
-        <li><img src="Images/DM-logo.JPG" width="15" height="15" /> <a href="Complaint_Problems.ormml">Complaint_Problems.ormml</a> 
+        <li><img src="Images/DM-logo.JPG" width="15" height="15" /> <a href="Contract.ormml">Contract.ormml</a> 
           file</li>
       </ul>
+      <h2>&nbsp;</h2>
       </td>
     <td valign="bottom" width="3%"> </td>
 </tr>
