@@ -30,8 +30,13 @@ body {
 .SectionTitle {
     font-size:170%;
     font-weight:bold;
+    color: #333;
+    margin-block-start: 0.20em;
+    margin-block-end: 0.20em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     }
-
+ 
 
 .SectionItem {
     margin-bottom:8px;
@@ -286,7 +291,7 @@ p .initcap {
       padding-bottom: 3px;
       color: #8a0000;
       font-weight: bold;
-      font-size: 120%;
+      font-size: 130%;
 }
 
 .Talk{
@@ -391,3 +396,12 @@ p .initcap {
       width: auto;
       border: 1px solid #aaa;
     }
+
+	
+	
+	
+@media print{
+	body{
+		background: #ffffff;
+	}
+}
